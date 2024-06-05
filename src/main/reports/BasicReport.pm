@@ -3,9 +3,7 @@ package BasicReport;
 use Cwd;
 
 sub generate_report {
-    # my ($module_name, $input, $output) = ($ARGV[0], $ARGV[1], $ARGV[2]);
     my ($module_name, $input, $output) = @_;
-    # my ($input_string, $output_string) = ("\[ INPUT \]", "\[ OUTPUT \]");
 
     my $header_format = "format header_format = \n".
     "======================================================================\n".
