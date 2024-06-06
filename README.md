@@ -22,7 +22,7 @@ LBioProject (Learn Bioinformatics Project) is a project for learning the basics 
 ```text
 1. set module (module name)
 
-2. set input (input)
+2. set input (function / subroutine from the specified module) (input)
 
 3. run (function / subroutine from the specified module)
 
@@ -32,7 +32,15 @@ LBioProject (Learn Bioinformatics Project) is a project for learning the basics 
 ### Example
 ```text
 set module Genomics::CentralDogma
-set input tacatt
+set input transcription tacgtgatt
+run transcription
+show_report
+```
+
+```text
+set module Genomics::CentralDogma
+set input transcription augcacuaa
+set input transcription true
 run transcription
 show_report
 ```

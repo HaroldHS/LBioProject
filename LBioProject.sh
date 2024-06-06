@@ -15,7 +15,9 @@ if [ $# -gt 0 ]; then
     elif [ $1 = "test" ]; then
         perl ./src/test/test.pl
     elif [ $1 = "clean" ]; then
-        rm -r ./report/
+        if [ -d ./report ]; then
+            rm -r ./report/
+        fi
     else
         echo "[-] Invalid command: $1"
         exit 0

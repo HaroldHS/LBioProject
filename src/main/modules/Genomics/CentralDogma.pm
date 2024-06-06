@@ -27,6 +27,13 @@ my %codon_table = (
     "Gly/G" => ["gga", "ggc", "ggg", "ggu"]
 );
 
+sub parameters {
+    return %hash = (
+        "transcription" => (),
+        "translation" => ()
+    );
+}
+
 sub transcription {
     my ($dna_sequence, $reverse) = @_;
     my $result = "";
