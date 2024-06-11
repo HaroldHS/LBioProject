@@ -9,8 +9,20 @@
 #       2. Make sure that perl is already installed on the system
 #
 
+help () {
+    echo "[ LBioProject ]\n";
+    echo "[ Available commands ]";
+    echo "* 'help' to show this help prompt";
+    echo "* 'test' to perform testing";
+    echo "* 'run' to run the project";
+    echo "* 'clean' to clean the project\n";
+}
+
 if [ $# -gt 0 ]; then
-    if [ $1 = "run" ]; then
+    if [ $1 = "help" ]; then
+        help
+        exit 0
+    elif [ $1 = "run" ]; then
         perl ./src/main/main.pl
     elif [ $1 = "test" ]; then
         perl ./src/test/test.pl
@@ -23,6 +35,6 @@ if [ $# -gt 0 ]; then
         exit 0
     fi
 else
-    echo "help"
+    help
     exit 1
 fi

@@ -8,13 +8,16 @@ LBioProject (Learn Bioinformatics Project) is a project for learning the basics 
 > 2. Change the permission of "__LBioProject.sh__" by using `chmod +x ./LBioProject.sh` or `chmod 755 ./LBioProject.sh`
 
 ```bash
-# 1. Run the project
+# 1. Show help / available commands
+./LBioProject.sh help
+
+# 2. Run the project
 ./LBioProject.sh run
 
-# 2. Perform test
+# 3. Perform test
 ./LBioProject.sh test
 
-# 3. Clean the project (optional)
+# 4. Clean the project (optional)
 ./LBioProject.sh clean
 ```
 
@@ -22,16 +25,19 @@ LBioProject (Learn Bioinformatics Project) is a project for learning the basics 
 ```text
 1. set module (module name)
 
-2. set input (function / subroutine from the specified module) (input)
+2. help
 
-3. run (function / subroutine from the specified module)
+3. set input (function / subroutine from the specified module) (input)
 
-4. show_report
+4. run (function / subroutine from the specified module)
+
+5. show_report
 ```
 
 ### Example
 ```text
 set module Genomics::CentralDogma
+help
 set input transcription tacgtgatt
 run transcription
 show_report

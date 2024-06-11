@@ -4,6 +4,7 @@ use lib "$Bin/reports";
 
 # Use/import all modules
 use Genomics::CentralDogma;
+use DNA::Alignment::PairwiseSequenceAlignment;
 
 # Use/import all report formatting
 use BasicReport;
@@ -36,6 +37,8 @@ while(1){
             die "[-] Invalid command: $input_word[1]\n";
         }
 
+    } elsif ($input_word[0] eq "help") {
+        eval $module."::help()" or warn "help() function is not available in $module\n";
     } elsif ($input_word[0] eq "run") {
 
         if ($input_word[1] =~ /^[a-zA-Z_]+$/) {
@@ -45,7 +48,7 @@ while(1){
             my $current_output = eval $module."::".$input_word[1]."(".$params.")";
             push(@report_output, $current_output) unless $current_output eq "";
             
-            print "[+] Result -> ".$current_output."\n";
+            print "\n[+] Result\n".$current_output."\n";
         } else {
             die "[-] Invalid method/subroutine name\n";
         }
