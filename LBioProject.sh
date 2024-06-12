@@ -6,21 +6,36 @@
 
 #
 # Note: 1. Don't forget to modify the permission of this file by running "chmod 755 LBioProject.sh" or "chmod +x LBioProject.sh"
-#       2. Make sure that perl is already installed on the system
+#       2. Make sure that Perl is already installed on the system (Version >= 5.34.0)
 #
 
+help () {
+    echo "[ LBioProject ]\n";
+    echo "LBioProject (Learn Bioinformatics Project) is a project for learning the basics of bioinformatics.\n";
+    echo "[ Available commands ]\n";
+    echo "* 'help' to show this help prompt";
+    echo "* 'test' to perform testing";
+    echo "* 'run' to run the project";
+    echo "* 'clean' to clean the project\n";
+}
+
 if [ $# -gt 0 ]; then
-    if [ $1 = "run" ]; then
+    if [ $1 = "help" ]; then
+        help
+        exit 0
+    elif [ $1 = "run" ]; then
         perl ./src/main/main.pl
     elif [ $1 = "test" ]; then
         perl ./src/test/test.pl
     elif [ $1 = "clean" ]; then
-        rm -r ./report/
+        if [ -d ./report ]; then
+            rm -r ./report/
+        fi
     else
         echo "[-] Invalid command: $1"
         exit 0
     fi
 else
-    echo "help"
+    help
     exit 1
 fi
