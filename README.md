@@ -27,6 +27,8 @@ LBioProject (Learn Bioinformatics Project) is a project for learning the basics 
 
 2. help
 
+3. set report [basic / list]
+
 3. set input (function / subroutine from the specified module) (input)
 
 4. run (function / subroutine from the specified module)
@@ -34,10 +36,14 @@ LBioProject (Learn Bioinformatics Project) is a project for learning the basics 
 5. show_report
 ```
 
+> Note:
+> `help` command is intended for showing the description of a module. So, make sure set the module first, then run `help` command.
+> `set report` is intended for using a specified template.
+
 ### Example
 ```text
 set module Genomics::CentralDogma
-help
+set report basic
 set input transcription tacgtgatt
 run transcription
 show_report
@@ -45,6 +51,7 @@ show_report
 
 ```text
 set module Genomics::CentralDogma
+set report list
 set input transcription augcacuaa
 set input transcription true
 run transcription

@@ -73,7 +73,7 @@ sub transcription {
         }
     }
 
-    return $result;
+    return @resultt = ($result);
 }
 
 sub translation {
@@ -91,7 +91,7 @@ sub translation {
         }
     }
 
-    return join("-", @amino_acid);
+    return @result = (join("-", @amino_acid));
 }
 
 1;

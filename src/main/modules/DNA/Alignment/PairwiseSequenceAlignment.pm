@@ -42,7 +42,6 @@ sub NeedlemanWunsch {
         }
     }
 
-
     # Iterative Backtracking
     my $i = length($dna1);
     my $j = length($dna2);
@@ -77,8 +76,11 @@ sub NeedlemanWunsch {
         }
     }
 
-    # Reverse both alignments
-    return "DNA1: ".reverse($dna1_align)."\nDNA2: ".reverse($dna2_align)."\nScore: ".$score."\n";
+    return @result = (
+        scalar reverse("$dna1_align"),
+        scalar reverse("$dna2_align"),
+        $score
+    );
 }
 
 sub SmithWaterman {
