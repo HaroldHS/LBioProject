@@ -8,17 +8,20 @@ use Genomics::CentralDogma;
 
 sub test_transcription {
     my ($input, $output) = @_;
-    return (Genomics::CentralDogma::transcription($input) eq $output);
+    my @result = Genomics::CentralDogma::transcription($input);
+    return ($result[0] eq $output);
 }
 
 sub test_reverse_transcription {
     my ($input, $output) = @_;
-    return (Genomics::CentralDogma::transcription($input, "true") eq $output);
+    my @result = Genomics::CentralDogma::transcription($input, "true");
+    return ($result[0] eq $output);
 }
 
 sub test_translation {
     my ($input, $output) = @_;
-    return (Genomics::CentralDogma::translation($input) eq $output);
+    my @result = Genomics::CentralDogma::translation($input);
+    return ($result[0] eq $output);
 }
 
 1;

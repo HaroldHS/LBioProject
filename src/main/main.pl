@@ -8,7 +8,8 @@ use DNA::Alignment::PairwiseSequenceAlignment;
 
 # Use/import all report formatting
 use BasicReport;
-use ListFormatReport;
+use ListReport;
+use HashReport;
 
 # States for modules and report
 my $module = "";
@@ -58,7 +59,9 @@ while (1) {
         if ($report eq "basic") {
             BasicReport::generate_report($module, \@report_input, \@report_output);
         } elsif ($report eq "list") {
-            ListFormatReport::generate_report($module, \@report_input, \@report_output);
+            ListReport::generate_report($module, \@report_input, \@report_output);
+        } elsif ($report eq "hash") {
+            HashReport::generate_report($module, \@report_input, \@report_output);
         } elsif ($report eq "") {
             die "[-] Report format is not defined\n";
         } else {

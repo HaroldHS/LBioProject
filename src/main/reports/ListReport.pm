@@ -1,4 +1,4 @@
-package ListFormatReport;
+package ListReport;
 
 use Cwd;
 
