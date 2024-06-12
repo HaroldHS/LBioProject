@@ -27,7 +27,7 @@ LBioProject (Learn Bioinformatics Project) is a project for learning the basics 
 
 2. help
 
-3. set report [basic / list]
+3. set report [basic / list / hash]
 
 3. set input (function / subroutine from the specified module) (input)
 
@@ -37,7 +37,7 @@ LBioProject (Learn Bioinformatics Project) is a project for learning the basics 
 ```
 
 > Note:
-> `help` command is intended for showing the description of a module. So, make sure set the module first, then run `help` command.
+> `help` command is intended for showing the description of a module. So, make sure to set the module first, then run `help` command.
 > `set report` is intended for using a specified template.
 
 ### Example

@@ -35,7 +35,7 @@ sub parameters {
 }
 
 sub help {
-    print "[ Available subroutines / functions ]\n\n";
+    print "[ Available subroutines/functions ]\n\n";
     print "[*] transcription : perform transcription process (input = [DNA, reverse flag], output = mRNA).\n";
     print "[*] translation : perform translation process (input = mRNA, output = amino acids).\n\n";
 
